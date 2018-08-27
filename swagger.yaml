@@ -1,0 +1,54 @@
+swagger: '2.0'
+
+info:
+  version: 1.0.0
+  title: Simple API
+  description: A simple API to learn how to write OpenAPI Specification
+schemes:
+  - http
+host: localhost
+basePath: /v1
+paths:
+  /accounts2:
+    get:
+      summary: Gets some accounts2
+      description: Returns a list containing all accounts2.
+      parameters:
+        - name: id
+          in: query
+          description: PK
+          required: true
+          type: integer
+          format: int32
+        - name: name
+          in: query
+          description: PK
+          required: true
+          type: string
+          format: string
+      responses:
+        200:
+          description: A list of records
+          schema:
+            type: array
+            items:
+              required:
+                - id
+                - name
+                - sex
+                - events
+              properties:
+                 id:
+                   type: integer
+                 name:
+                   type: string
+                 sex:
+                   type: boolean
+                 events:
+                   type: array
+                   items:
+                     type: integer
+        400 :
+          description: Record not found
+        default:
+          description: Sorry something went wrong

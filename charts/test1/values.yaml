@@ -4,8 +4,8 @@
 host: "0.0.0.0"
 replicaCount: 1
 image:
-  repository: draft
-  tag: dev
+  repository: 10.110.91.157:5000/stevef1uk/test1
+  tag: 0.0.4
   pullPolicy: IfNotPresent
 service:
   name: test1

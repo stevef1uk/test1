@@ -1,5 +1,6 @@
 SHELL := /bin/bash
-GO := GO15VENDOREXPERIMENT=1 go
+#GO := GO15VENDOREXPERIMENT=1 go
+GO := GO111MODULE=on go
 NAME := test1
 OS := $(shell uname)
 MAIN_GO := cmd/simple-server/main.go
